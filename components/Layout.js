@@ -1,15 +1,27 @@
 import React from "react";
 import Link from "next/link";
+import styled from "styled-components";
+
+const Nav = styled.nav`
+  background: crimson;
+`;
+const LinkStyle = styled(Link)`
+  background: blue;
+  color: orange;
+`;
+const Ul = styled.ul`
+  background: orange;
+`;
 
 const Layaout = ({ children }) => {
   return (
     <>
       <header>
-        <nav className="p-d-flex p-flex-row">
-          <Link href="/" classNamep="p-mb-2">
+        <Nav className="p-d-flex p-jc-between">
+          <LinkStyle href="/">
             <a>PokeStore</a>
-          </Link>
-          <ul className="p-d-flex">
+          </LinkStyle>
+          <Ul className="p-d-flex p-flex-column">
             <li>
               <Link href="./trending">
                 <a>Trending</a>
@@ -25,8 +37,8 @@ const Layaout = ({ children }) => {
                 <a>Basket</a>
               </Link>
             </li>
-          </ul>
-        </nav>
+          </Ul>
+        </Nav>
       </header>
       <main>{children}</main>
       <footer>
