@@ -1,3 +1,4 @@
+import "reset-css";
 import Layout from "../components/Layout";
 import "primeflex/primeflex.css";
 import "primereact/resources/themes/saga-blue/theme.css";

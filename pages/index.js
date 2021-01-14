@@ -9,7 +9,6 @@ const Title = styled.h1`
 
 const Newbutton = styled(Button)`
   color: white;
-  width: 500px;
   background: crimson;
 
   &&:hover {
