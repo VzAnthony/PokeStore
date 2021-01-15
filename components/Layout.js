@@ -29,6 +29,11 @@ const Ul = styled.ul`
   }
 `;
 
+const Main = styled.main`
+  background: #dddddd;
+  padding: 25px 50px;
+`;
+
 const Footer = styled.footer`
   background: #222831;
   height: auto;
@@ -81,7 +86,7 @@ const Layaout = ({ children }) => {
           </Ul>
         </Nav>
       </header>
-      <main>{children}</main>
+      <Main>{children}</Main>
       <Footer className="p-grid">
         <div className="p-col-6">
           <P>Nuestras Redes</P>

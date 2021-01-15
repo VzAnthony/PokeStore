@@ -1,29 +1,16 @@
-import React, { useState } from "react";
-import styled from "styled-components";
-import { Button } from "primereact/button";
-import { InputSwitch } from "primereact/inputswitch";
-
-const Title = styled.h1`
-  color: red;
-`;
-
-const Newbutton = styled(Button)`
-  color: white;
-  background: crimson;
-
-  &&:hover {
-    background: black;
-  }
-`;
+import React from "react";
+import { useGetPokemon } from "../hooks/useGetPokemon";
+import Hero from "../components/Hero";
 
 const Home = () => {
-  const [checked1, setChecked1] = useState(false);
+  const [loading, initialPokemon] = useGetPokemon("bulbasaur");
+  if (!loading) {
+    console.log(initialPokemon.pokemon);
+  }
+
   return (
     <div>
-      <Title>This is my new app</Title>
-      <Newbutton label="Submit" />
-      <h1>basic</h1>
-      <InputSwitch checked={checked1} onChange={(e) => setChecked1(e.value)} />
+      <Hero />
     </div>
   );
 };

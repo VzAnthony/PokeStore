@@ -1,4 +1,5 @@
 import "reset-css";
+import { Provider } from "../lib/apolloClient";
 import Layout from "../components/Layout";
 import "primeflex/primeflex.css";
 import "primereact/resources/themes/saga-blue/theme.css";
@@ -7,9 +8,11 @@ import "primeicons/primeicons.css";
 
 function MyApp({ Component, pageProps }) {
   return (
-    <Layout>
-      <Component {...pageProps} />;
-    </Layout>
+    <Provider>
+      <Layout>
+        <Component {...pageProps} />
+      </Layout>
+    </Provider>
   );
 }
 
