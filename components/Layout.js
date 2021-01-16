@@ -31,7 +31,8 @@ const Ul = styled.ul`
 
 const Main = styled.main`
   background: #dddddd;
-  padding: 25px 50px;
+  padding: 0 50px 20px 50px;
+  width: 100%;
 `;
 
 const Footer = styled.footer`
