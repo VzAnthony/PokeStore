@@ -25,7 +25,7 @@ const CarouselStyle = styled(Carousel)`
     background: black;
   }
 
-  && .carousel-items-content ..carousel-items-container .p-carousel-item {
+  && .carousel-items-content .carousel-items-container .p-carousel-item {
     width: 1020px;
   }
 `;
@@ -37,33 +37,111 @@ const Span = styled.span`
   min-width: 100px;
   max-width: 1020px;
   background: blue;
+
+  .welcome {
+    display: block;
+    height: inherit;
+    background: url("../images/welcome.png") center no-repeat;
+  }
+
+  .fire {
+    display: block;
+    height: inherit;
+    background: url("../images/fire-type.png") center no-repeat;
+  }
+
+  .water {
+    display: block;
+    height: inherit;
+    background: url("../images/water-type.png") center no-repeat;
+  }
+
+  .fight {
+    display: block;
+    height: inherit;
+    background: url("../images/fight-type.png") center no-repeat;
+  }
+
+  .dragon {
+    display: block;
+    height: inherit;
+    background: url("../images/dragon-type.png") center no-repeat;
+  }
+
+  .grass {
+    display: block;
+    height: inherit;
+    background: url("../images/grass-type.png") center no-repeat;
+  }
+
+  @media (max-width: 650px) {
+    .welcome {
+      display: block;
+      height: inherit;
+      background: url("../images/welcome.png") center no-repeat;
+      background-size: 500px 200px;
+    }
+
+    .fire {
+      display: block;
+      height: inherit;
+      background: url("../images/fire-type.png") center no-repeat;
+      background-size: 560px 200px;
+    }
+
+    .water {
+      display: block;
+      height: inherit;
+      background: url("../images/water-type.png") center no-repeat;
+      background-size: 560px 200px;
+    }
+
+    .fight {
+      display: block;
+      height: inherit;
+      background: url("../images/fight-type.png") center no-repeat;
+      background-size: 560px 200px;
+    }
+
+    .dragon {
+      display: block;
+      height: inherit;
+      background: url("../images/dragon-type.png") center no-repeat;
+      background-size: 560px 200px;
+    }
+
+    .grass {
+      display: block;
+      height: inherit;
+      background: url("../images/grass-type.png") center no-repeat;
+      background-size: 560px 200px;
+    }
+  }
 `;
-const quizTemplate = (bag) => <Span>{bag.type}</Span>;
+const quizTemplate = (bag) => (
+  <Span>
+    <span className={bag.type}></span>
+  </Span>
+);
 
 const Hero = () => {
   const carouselImg = [
     {
-      // image: "../images/welcome.png",
       type: "welcome",
     },
     {
-      // image: "../images/fire-type.png",
       type: "fire",
     },
     {
-      // image: "../images/dragon-type.png",
       type: "grass",
     },
     {
-      // image: "../images/grass-type.png",
       type: "water",
     },
     {
-      // image: "../images/water-type.png",
       type: "fight",
     },
     {
-      // image: "../images/fight-type.png",
       type: "dragon",
     },
   ];

@@ -67,7 +67,7 @@ const PokemonList = () => {
   };
 
   return (
-    <div className="p-grid">
+    <div className="p-grid p-justify-center">
       {pokemonNames.map((pokemon) => (
         <>
           <CardStyled
