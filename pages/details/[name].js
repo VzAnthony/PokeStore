@@ -4,7 +4,12 @@ import { useGetPokemon } from "../../hooks/useGetPokemon";
 
 import { Button } from "primereact/button";
 import { InputSwitch } from "primereact/inputswitch";
-import { CardStyled, DivContainer, Div, DivList } from "./pokemonStyles";
+import {
+  CardStyled,
+  DivContainer,
+  Div,
+  DivList,
+} from "../../styles/pokemonStyles";
 import { Tooltip } from "primereact/tooltip";
 
 const Details = () => {
