@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import styled from "styled-components";
 import { Carousel } from "primereact/carousel";
 
@@ -36,7 +37,7 @@ const Span = styled.span`
   height: 200px;
   min-width: 100px;
   max-width: 1020px;
-  background: blue;
+  cursor: pointer;
 
   .welcome {
     display: block;
@@ -118,10 +119,13 @@ const Span = styled.span`
     }
   }
 `;
+
 const quizTemplate = (bag) => (
-  <Span>
-    <span className={bag.type}></span>
-  </Span>
+  <Link href="../trending">
+    <Span>
+      <span className={bag.type}></span>
+    </Span>
+  </Link>
 );
 
 const Hero = () => {

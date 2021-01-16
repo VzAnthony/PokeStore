@@ -1,9 +1,10 @@
 import React from "react";
+import ContinentList from "../../components/ContinentList";
 
 const Trending = () => {
   return (
     <div>
-      <h1>Trending Component</h1>
+      <ContinentList />
     </div>
   );
 };
