@@ -8,7 +8,7 @@ function useLocalStorage(key, initialValue) {
       if (!favList || !favList[key]) {
         return initialValue;
       }
-      return favList[key] !== null ? favList[key].fav : initialValue;
+      return favList[key].fav;
     } catch (err) {
       return initialValue;
     }
@@ -24,18 +24,16 @@ function useLocalStorage(key, initialValue) {
         const dataStorage = {
           name: data.name,
           image: data.image,
-          fav: storeValue,
+          fav: !storeValue,
         };
         favList[key] = dataStorage;
         window.localStorage.setItem("favList", JSON.stringify(favList));
       } else {
         setValue(value);
-        favList[key] = { ...favList[key], fav: storeValue };
+        favList[key] = { ...favList[key], fav: !storeValue };
         window.localStorage.setItem("favList", JSON.stringify(favList));
       }
-    } catch (err) {
-      console.error(err);
-    }
+    } catch (err) {}
   };
 
   return [storeValue, setLocalStorage];

@@ -7,12 +7,12 @@ export const CardStyled = styled(Card)`
   text-align: center;
   margin: 10px;
   box-shadow: 3px 3px 5px 6px #ccc;
-  border: 1px solid #ddd;
+  border: 1.5px solid #ddd;
   border-radius: 10px;
 
   &&:hover {
     transition: 0.5s;
-    border: solid 1px grey;
+    border: solid 1.5px grey;
     box-shadow: 3px 3px 5px 6px grey;
   }
 `;

@@ -27,9 +27,6 @@ const DataTableStyled = styled(DataTable)`
 
 const Cart = () => {
   const context = useContext(Context);
-
-  console.log(context);
-
   const cart = context.cart.map((pokemon) => {
     return {
       name: pokemon.name,

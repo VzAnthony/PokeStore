@@ -3,6 +3,7 @@ import Link from "next/link";
 import useLocalStorage from "../hooks/useLocalStorage";
 import { Button } from "primereact/button";
 import { CardStyled, Img } from "../styles/pokemonItemStyled";
+
 import styled from "styled-components";
 
 const CardFavStyled = styled(CardStyled)`
@@ -16,7 +17,7 @@ const CardFavStyled = styled(CardStyled)`
   }
 `;
 
-const PokemonItem = ({ pokemon }) => {
+const PokemonFavItem = ({ pokemon }) => {
   const key = `fav-${pokemon.name}`;
 
   const [fav, setFav] = useLocalStorage(key, false);
@@ -55,4 +56,4 @@ const PokemonItem = ({ pokemon }) => {
   );
 };
 
-export default PokemonItem;
+export default PokemonFavItem;

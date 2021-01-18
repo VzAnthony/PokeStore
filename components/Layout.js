@@ -37,13 +37,22 @@ const Main = styled.main`
 
 const Footer = styled.footer`
   background: #222831;
-  height: auto;
   color: white;
   padding: 20px 0;
+
+  @media (max-width: 533px) {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    div {
+      margin: 20px 0;
+    }
+  }
 `;
 
 const P = styled.p`
-  margin: 0 0 10px 0;
+  margin: 0 0 20px 0;
   text-align: center;
   font-size: 1.1rem;
   color: #f05454;
@@ -52,6 +61,20 @@ const P = styled.p`
 
 const Li = styled.li`
   text-align: center;
+
+  i {
+    font-size: 2rem;
+    color: white;
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
 `;
 
 const Layaout = ({ children }) => {
@@ -64,7 +87,7 @@ const Layaout = ({ children }) => {
           </Link>
           <Ul className="p-d-flex p-jc-evenly p-dm-10">
             <li>
-              <Link href="../trending">
+              <Link href="./trending">
                 <a>
                   <i className="pi pi-chart-line"></i>
                 </a>
@@ -80,7 +103,7 @@ const Layaout = ({ children }) => {
             <li>
               <Link href="../cart">
                 <a>
-                  <Li className="pi pi-shopping-cart"></Li>
+                  <i className="pi pi-shopping-cart"></i>
                 </a>
               </Link>
             </li>
@@ -88,34 +111,70 @@ const Layaout = ({ children }) => {
         </Nav>
       </header>
       <Main>{children}</Main>
-      <Footer className="p-grid">
-        <div className="p-col-6">
+      <Footer className="p-d-flex p-jc-around">
+        <div>
           <P>Nuestras Redes</P>
           <div>
-            <ul className="p-grid ">
-              <Li className="p-col-6 p-col-align-center ">
-                <i className="pi pi-facebook"></i>
+            <ul className="p-grid  p-justify-center">
+              <Li className="p-col-fixed p-col-align-center ">
+                <Link href="https://es-la.facebook.com/Pokemon/">
+                  <a target="_blank">
+                    <i className="pi pi-facebook"></i>
+                  </a>
+                </Link>
               </Li>
-              <li className="p-col-fixed p-col-align-center">
-                <i className="pi pi-github"></i>
-              </li>
-              <Li className="p-col-6 p-col-align-center">
-                <i className="pi pi-youtube"></i>
+              <Li className="p-col-fixed p-col-align-center">
+                <Link href="https://github.com/VzAnthony/PokeStore">
+                  <a target="_blank">
+                    <i className="pi pi-github"></i>
+                  </a>
+                </Link>
               </Li>
-              <li className="p-col-fixed p-col-align-center">
-                <i className="pi pi-twitter"></i>
-              </li>
+              <Li className="p-col-fixed p-col-align-center">
+                <Link href="https://www.youtube.com/user/PokemonOficialES/videos">
+                  <a target="_blank">
+                    <i className="pi pi-youtube"></i>
+                  </a>
+                </Link>
+              </Li>
+              <Li className="p-col-fixed p-col-align-center">
+                <Link href="https://twitter.com/pokemon?lang=es">
+                  <a target="_blank">
+                    <i className="pi pi-twitter"></i>
+                  </a>
+                </Link>
+              </Li>
             </ul>
           </div>
         </div>
-        <div className="p-col-6">
+        <div>
           <P>Mas Información </P>
           <div>
             <ul>
-              <Li className="p-col-12">Quienes Somos?</Li>
-              <Li className="p-col-12">Nuestros Articulos</Li>
-              <Li className="p-col-12">Tendencia</Li>
-              <Li className="p-col-12">Todos los derechos Reservados ©</Li>
+              <Li className="p-col-12">
+                <Link href="./trending">
+                  <a>
+                    <p>Quienes Somos?</p>
+                  </a>
+                </Link>
+              </Li>
+              <Li className="p-col-12">
+                <Link href="../">
+                  <a>
+                    <p>Nuestros Articulos</p>
+                  </a>
+                </Link>
+              </Li>
+              <Li className="p-col-12">
+                <Link href="./trending">
+                  <a>
+                    <p>Tendencia</p>
+                  </a>
+                </Link>
+              </Li>
+              <Li className="p-col-12">
+                <p>Todos los derechos Reservados ©</p>
+              </Li>
             </ul>
           </div>
         </div>
