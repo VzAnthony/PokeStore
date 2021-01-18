@@ -191,8 +191,9 @@ const ContinentList = () => {
         </p>
       </Div>
       <div className="p-grid p-justify-center">
-        {continentList.map((continent) => (
+        {continentList.map((continent, index) => (
           <Continent
+            key={`${continent.name}-${index}`}
             continent={continent.name}
             img={continent.img}
             type={continent.type}

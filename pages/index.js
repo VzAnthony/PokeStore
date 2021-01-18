@@ -4,10 +4,6 @@ import Hero from "../components/Hero";
 import PokemonList from "../components/PokemonList";
 
 const Home = () => {
-  const [loading, initialPokemon] = useGetPokemon("bulbasaur");
-  if (!loading) {
-  }
-
   return (
     <div>
       <Hero />

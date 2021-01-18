@@ -7,6 +7,8 @@ export const CardStyled = styled(Card)`
   min-width: 300px;
   box-shadow: 3px 3px 5px 6px grey;
   margin: 40px 10px;
+  border-radius: 10px;
+  border: 3px solid #ddd;
 
   .p-card-title {
     text-align: center;

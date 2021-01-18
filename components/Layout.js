@@ -64,21 +64,21 @@ const Layaout = ({ children }) => {
           </Link>
           <Ul className="p-d-flex p-jc-evenly p-dm-10">
             <li>
-              <Link href="./trending">
+              <Link href="../trending">
                 <a>
                   <i className="pi pi-chart-line"></i>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="./favs">
+              <Link href="../favs">
                 <a>
                   <i className="pi pi-star-o"></i>
                 </a>
               </Link>
             </li>
             <li>
-              <Link href="./basket">
+              <Link href="../cart">
                 <a>
                   <Li className="pi pi-shopping-cart"></Li>
                 </a>
