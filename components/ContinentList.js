@@ -1,42 +1,5 @@
 import React from "react";
 import Continent from "./Continent";
-import styled from "styled-components";
-
-const Div = styled.div`
-  color: #30475e;
-  width: 100%;
-  height: 200px;
-  text-shadow: 2px 2px 2px white;
-  padding: 20px 0;
-  h2 {
-    font-size: 1.6rem;
-  }
-  p {
-    margin-top: 20px;
-    text-align: center;
-    font-size: 0.95rem;
-  }
-
-  @media (min-width: 550px) {
-    h2 {
-      font-size: 2rem;
-    }
-
-    p {
-      font-size: 1.4rem;
-    }
-  }
-
-  @media (min-width: 650px) {
-    h2 {
-      font-size: 3.5rem;
-    }
-
-    p {
-      font-size: 2rem;
-    }
-  }
-`;
 
 const ContinentList = () => {
   const continentList = [
@@ -61,7 +24,7 @@ const ContinentList = () => {
         ],
       },
       reason:
-        "Se considera al contienen africano como la cuna de la civilizacion humana, debido a evidencias arqueologicas, se cuenta que esta primera civilizacion humana desarrollo un fuerte lazo con los pokemons de tipo lucha, por lo que se puede decir que es un lazo que posee cada habitante del contienente con un pokemon de este tipo, ademas de poseer un clima mas tropical que estos pokemons encuentren este clima muy agradable",
+        "Se le considera al continente africano como la cuna de la civilización humana, debido a evidencias arqueológicas, se cuenta que esta primera civilización humana desarrollo un fuerte lazo con los pokemons de tipo lucha, por lo que se puede decir que es un lazo que posee cada habitante del continente con un pokemon de este tipo, ademas de poseer un clima más tropical que estos pokemons encuentren este clima muy agradable.",
     },
     {
       name: "America",
@@ -84,7 +47,7 @@ const ContinentList = () => {
         ],
       },
       reason:
-        "Es un continente de gran extension que posee mayormente un clima tropical el cual beneficia a las plantas y pokemons tipo planta, se podria decir que son los que mas predominan por este contienente y se benefician por ambos lados, ayudando a los habitantes ademas de ayudar en mejorar la fauna y la vegetacion",
+        "Es un continente de gran extensión que posee mayormente un clima tropical el cual beneficia a las plantas y pokemons tipo planta, se podría decir que son los que más predominan por este continente y se benefician por ambos lados, ayudando a los habitantes ademas de ayudar en mejorar la fauna y la vegetación.",
     },
     {
       name: "Antarctica",
@@ -107,7 +70,7 @@ const ContinentList = () => {
         ],
       },
       reason:
-        "Debido a que es un continente cubierto de hielo, donde la flora y fauna esta compuesta solo por organismos adaptados a condiciones climaticas extremas los pokemon tipo Hielo se adecuan perfectamente para este lugar ayudando a lo que lo visitan debido a que no posee una poblacion permanente solo habitantes temporales.",
+        "Debido a que es un continente cubierto de hielo, donde la flora y fauna está compuesta solo por organismos adaptados a condiciones climáticas extremas los pokemons tipo Hielo se adecúan perfectamente para este lugar ayudando a lo que lo visitan debido a que no posee una población permanente solo habitantes temporales.",
     },
     {
       name: "Asia",
@@ -130,7 +93,7 @@ const ContinentList = () => {
         ],
       },
       reason:
-        "Es el sitio que mayor poblacion que existe entre los otros continentes debido a las diversas criaturas legendarias de sus mitologias y folclore entre los mas populares se encuentran los dragones, por lo que cada habitante del contienete asiatico aspira a tener un dragon como acompañante de vida, algunos habitantes declaran haber visto por los cielos pokemons legendarios tipo dragon por lo que llama muchisimo mas su atencion tener uno de estos pokemons",
+        "Es el sitio que mayor población que existe entre los otros continentes debido a las diversas criaturas legendarias de sus mitologías y folclore entre los más populares se encuentran los dragones, por lo que cada habitante del continente asiático aspira a tener un dragón como acompañante de vida, algunos habitantes declaran haber visto por los cielos pokemons legendarios tipo dragón por lo que llama muchísimo más su atención tener uno de estos pokemons.",
     },
     {
       name: "Europe",
@@ -153,7 +116,7 @@ const ContinentList = () => {
         ],
       },
       reason:
-        "El segundo continente mas pequeño, debido al clima variado que este posee actualmente en algunos sitios esta empezando a never o continua nevando por lo que la necesidad de tener pokemons de tipo fuego ha servido de gran ayuda para todos los habitates de este contienente y han logrado encontrar un sitio en europa",
+        "El segundo continente más pequeño, debido al clima variado que este posee actualmente en algunos sitios está empezando a nevar o continúa nevando por lo que la necesidad de tener pokemons de tipo fuego ha servido de gran ayuda para todos los habitantes de este continente y han logrado encontrar un sitio en Europa.",
     },
     {
       name: "Oceania",
@@ -176,20 +139,18 @@ const ContinentList = () => {
         ],
       },
       reason:
-        "Gracias a que es un contienete de menor tamaño, con respecto a los demas y tambien posee muchas islas, los pokemons de tipo agua pudieron encontrar un sitio entre los habitantes de oseania debido a que gracias a pertenecer a este elemento facilita mucho el transporte de islas ademas de rendir homenaje a su nombre que se bede a las hijas del oceano.",
+        "Gracias a que es un continente de menor tamaño, con respecto a los demás y también posee muchas islas, los pokemons de tipo agua pudieron encontrar un sitio entre los habitantes de Oceanía debido a que gracias a pertenecer a este elemento facilita mucho el transporte de islas ademas de rendir homenaje a su nombre que se debe a las hijas del océano.",
     },
   ];
   return (
     <>
-      <Div className="p-d-flex p-flex-column p-ai-center p-jc-center">
-        <h2>TRENDING</h2>
-        <p>
-          En esta seccion podremos observar como fluctua la adquisicion de
-          cierto tipos de pokemon en los continentes del mundo y su motivo,
-          ademas de poder observar una grafica para que se pueda ver mejor la
-          velocidad de crecimiento de estas especies.
-        </p>
-      </Div>
+      <h2>TRENDING</h2>
+      <p>
+        En esta seccion podremos observar como fluctua la adquisicion de cierto
+        tipos de pokemons en los continentes del mundo y su motivo, ademas de
+        poder observar una grafica para que se pueda ver mejor la velocidad de
+        crecimiento de estas especies.
+      </p>
       <div className="p-grid p-justify-center">
         {continentList.map((continent, index) => (
           <Continent

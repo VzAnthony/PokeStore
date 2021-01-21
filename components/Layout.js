@@ -1,5 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
+import { Sidebar } from "primereact/sidebar";
+import { Button } from "primereact/button";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -27,12 +30,20 @@ const Ul = styled.ul`
     height: 100%;
     width: 100%;
   }
+
+  @media (min-width: 768px) {
+    justify-content: space-between;
+  }
 `;
 
 const Main = styled.main`
   background: #dddddd;
   padding: 0 50px 20px 50px;
   width: 100%;
+
+  @media (max-width: 425px) {
+    padding: 0 10px 20px 10px;
+  }
 `;
 
 const Footer = styled.footer`
@@ -77,7 +88,45 @@ const Li = styled.li`
   }
 `;
 
+const SidebarStyled = styled(Sidebar)`
+  background: #222831;
+  .p-sidebar-content {
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+  }
+
+  .p-sidebar-content p {
+    margin: 30px 0;
+  }
+`;
+
+const ButtonStyled = styled(Button)`
+  background: #222831;
+  border: 1px solid #30475e;
+  text-align: start;
+  margin: 0 15px 0 0;
+  @media (min-width: 768px) {
+    display: none;
+  }
+`;
+
+const LiHeader = styled.li`
+  display: none;
+
+  .active {
+    background: #b22222;
+    border-radius: 50px;
+  }
+
+  @media (min-width: 768px) {
+    display: block;
+  }
+`;
+
 const Layaout = ({ children }) => {
+  const [visible, setVisible] = useState(false);
+  const { pathname } = useRouter();
   return (
     <>
       <header>
@@ -85,27 +134,58 @@ const Layaout = ({ children }) => {
           <Link href="/">
             <Anchor>PokeStore</Anchor>
           </Link>
-          <Ul className="p-d-flex p-jc-evenly p-dm-10">
-            <li>
-              <Link href="./trending">
-                <a>
+          <Ul className="p-d-flex p-jc-end">
+            <LiHeader>
+              <Link href="../">
+                <a className={`${pathname === "/" ? "active" : ""}`}>
+                  <i className="pi pi-home"></i>
+                </a>
+              </Link>
+            </LiHeader>
+            <LiHeader>
+              <Link href="../trending">
+                <a className={`${pathname === "/trending" ? "active" : ""}`}>
                   <i className="pi pi-chart-line"></i>
                 </a>
               </Link>
-            </li>
-            <li>
+            </LiHeader>
+            <LiHeader>
               <Link href="../favs">
-                <a>
+                <a className={`${pathname === "/favs" ? "active" : ""}`}>
                   <i className="pi pi-star-o"></i>
                 </a>
               </Link>
-            </li>
-            <li>
-              <Link href="../cart">
-                <a>
+            </LiHeader>
+            <LiHeader>
+              <Link href="../payment">
+                <a className={`${pathname === "/payment" ? "active" : ""}`}>
                   <i className="pi pi-shopping-cart"></i>
                 </a>
               </Link>
+            </LiHeader>
+            <li>
+              <SidebarStyled
+                visible={visible}
+                baseZIndex={1000000}
+                onHide={() => setVisible(false)}
+              >
+                <Link href="/">
+                  <p>Home</p>
+                </Link>
+                <Link href="../trending">
+                  <p>Trending</p>
+                </Link>
+                <Link href="../favs">
+                  <p>Favorites</p>
+                </Link>
+                <Link href="../payment">
+                  <p>Cart</p>
+                </Link>
+              </SidebarStyled>
+              <ButtonStyled
+                icon="pi pi-bars"
+                onClick={(e) => setVisible(true)}
+              />
             </li>
           </Ul>
         </Nav>
@@ -151,13 +231,6 @@ const Layaout = ({ children }) => {
           <P>Mas Información </P>
           <div>
             <ul>
-              <Li className="p-col-12">
-                <Link href="./trending">
-                  <a>
-                    <p>Quienes Somos?</p>
-                  </a>
-                </Link>
-              </Li>
               <Li className="p-col-12">
                 <Link href="../">
                   <a>

@@ -1,15 +1,14 @@
 import React from "react";
-import { useGetPokemon } from "../hooks/useGetPokemon";
 import Hero from "../components/Hero";
-import PokemonList from "../components/PokemonList";
+import Home from "../components/Home";
 
-const Home = () => {
+const HomePage = () => {
   return (
     <div>
       <Hero />
-      <PokemonList />
+      <Home />
     </div>
   );
 };
 
-export default Home;
+export default HomePage;

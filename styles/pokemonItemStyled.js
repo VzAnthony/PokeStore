@@ -9,6 +9,7 @@ export const CardStyled = styled(Card)`
   box-shadow: 3px 3px 5px 6px #ccc;
   border: 1.5px solid #ddd;
   border-radius: 10px;
+  text-transform: capitalize;
 
   &&:hover {
     transition: 0.5s;

@@ -2,6 +2,7 @@ import styled from "styled-components";
 import { Card } from "primereact/card";
 
 export const CardStyled = styled(Card)`
+  position: relative;
   width: 100%;
   max-width: 50%;
   min-width: 300px;
@@ -155,9 +156,14 @@ export const DivContainer = styled.div`
   border-bottom: 1px solid #dddddd;
 
   && h2 {
+    margin-top: 40px;
     font-weight: bold;
     text-align: center;
     color: #30475e;
+  }
+
+  button {
+    position: absolute;
   }
 `;
 

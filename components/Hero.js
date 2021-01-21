@@ -75,46 +75,38 @@ const Span = styled.span`
     background: url("../images/grass-type.png") center no-repeat;
   }
 
+  .ice {
+    display: block;
+    height: inherit;
+    background: url("../images/ice-type.png") center no-repeat;
+  }
+
   @media (max-width: 650px) {
     .welcome {
-      display: block;
-      height: inherit;
-      background: url("../images/welcome.png") center no-repeat;
       background-size: 500px 200px;
     }
 
     .fire {
-      display: block;
-      height: inherit;
-      background: url("../images/fire-type.png") center no-repeat;
       background-size: 560px 200px;
     }
 
     .water {
-      display: block;
-      height: inherit;
-      background: url("../images/water-type.png") center no-repeat;
       background-size: 560px 200px;
     }
 
     .fight {
-      display: block;
-      height: inherit;
-      background: url("../images/fight-type.png") center no-repeat;
       background-size: 560px 200px;
     }
 
     .dragon {
-      display: block;
-      height: inherit;
-      background: url("../images/dragon-type.png") center no-repeat;
       background-size: 560px 200px;
     }
 
     .grass {
-      display: block;
-      height: inherit;
-      background: url("../images/grass-type.png") center no-repeat;
+      background-size: 560px 200px;
+    }
+
+    .ice {
       background-size: 560px 200px;
     }
   }
@@ -147,6 +139,9 @@ const Hero = () => {
     },
     {
       type: "dragon",
+    },
+    {
+      type: "ice",
     },
   ];
   return (
