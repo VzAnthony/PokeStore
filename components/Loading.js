@@ -1,10 +1,6 @@
 import React from "react";
 import { ProgressSpinner } from "primereact/progressspinner";
-import styled from "styled-components";
-
-const Div = styled.div`
-  height: 500px;
-`;
+import { Div } from "../styles/LoadingStyled";
 
 const quiz = () => {
   return (

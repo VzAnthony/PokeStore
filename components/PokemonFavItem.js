@@ -4,19 +4,6 @@ import useLocalStorage from "../hooks/useLocalStorage";
 import { Button } from "primereact/button";
 import { CardStyled, Img } from "../styles/pokemonItemStyled";
 
-import styled from "styled-components";
-
-const CardFavStyled = styled(CardStyled)`
-  border-color: ${(props) => props.theme.themeFav && "#FBC02D"};
-  box-shadow: 3px 3px 5px 6px
-    ${(props) => (props.theme.themeFav ? "#ffff9e" : "#ccc")};
-  &&:hover {
-    box-shadow: 3px 3px 5px 6px
-      ${(props) => (props.theme.themeFav ? "#ffff24" : "grey")};
-    border-color: ${(props) => props.theme.themeFav && "#FBC02D"};
-  }
-`;
-
 const PokemonFavItem = ({ pokemon }) => {
   const key = `fav-${pokemon.name}`;
 
@@ -46,13 +33,13 @@ const PokemonFavItem = ({ pokemon }) => {
   };
 
   return (
-    <CardFavStyled
+    <CardStyled
       theme={{ themeFav: fav }}
       title={pokemon.name}
       subTitle="49.99 $"
       header={header(pokemon)}
       footer={footer(pokemon)}
-    ></CardFavStyled>
+    ></CardStyled>
   );
 };
 

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import styled from "styled-components";
-
+import { Form, Div, DivData } from "../styles/PaymentFormStyled";
 import { Calendar } from "primereact/calendar";
 import { InputText } from "primereact/inputtext";
 import { Dropdown } from "primereact/dropdown";
@@ -8,51 +7,16 @@ import { InputMask } from "primereact/inputmask";
 import { Button } from "primereact/button";
 import { confirmDialog } from "primereact/confirmdialog";
 
-const Form = styled.form`
-  width: 100%;
-`;
-
-const Div = styled.div`
-  width: 100%;
-  text-align: center;
-
-  h2 {
-    font-size: 1.5rem;
-    margin: 20px 0;
-  }
-`;
-
-const DivData = styled.div`
-  @media (min-width: 425px) {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-
-    label {
-      margin: 0 5px;
-    }
-  }
-
-  @media (min-width: 768px) {
-    display: flex;
-    justify-content: space-center;
-    flex-wrap: wrap;
-
-    label {
-      margin: 0 5px;
-    }
-  }
-`;
 const paymentForm = () => {
-  const [name, setName] = useState(null);
-  const [lastname, setLastname] = useState(null);
-  const [birth, setBirth] = useState(null);
-  const [email, setEmail] = useState(null);
-  const [gender, setGender] = useState(null);
-  const [cardholder, setCardholder] = useState(null);
-  const [cardNumber, setCardNumber] = useState(null);
-  const [expiration, setExpiration] = useState(null);
-  const [cvv, setCvv] = useState(null);
+  const [name, setName] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [birth, setBirth] = useState("");
+  const [email, setEmail] = useState("");
+  const [gender, setGender] = useState("");
+  const [cardholder, setCardholder] = useState("");
+  const [cardNumber, setCardNumber] = useState("");
+  const [expiration, setExpiration] = useState("");
+  const [cvv, setCvv] = useState("");
 
   const genderSelect = [
     { label: "Male", value: "M" },
@@ -68,8 +32,6 @@ const paymentForm = () => {
       message: "Are you sure you want to proceed?",
       header: "Confirmation",
       icon: "pi pi-exclamation-triangle",
-      // accept: accept,
-      // reject: reject,
     });
   };
 

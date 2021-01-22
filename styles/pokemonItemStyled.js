@@ -16,6 +16,15 @@ export const CardStyled = styled(Card)`
     border: solid 1.5px grey;
     box-shadow: 3px 3px 5px 6px grey;
   }
+
+  border-color: ${(props) => props.theme.themeFav && "#FBC02D"};
+  box-shadow: 3px 3px 5px 6px
+    ${(props) => (props.theme.themeFav ? "#ffff9e" : "#ccc")};
+  &&:hover {
+    box-shadow: 3px 3px 5px 6px
+      ${(props) => (props.theme.themeFav ? "#ffff24" : "grey")};
+    border-color: ${(props) => props.theme.themeFav && "#FBC02D"};
+  }
 `;
 
 export const Img = styled.img`

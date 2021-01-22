@@ -1,16 +1,7 @@
 import React, { useState } from "react";
 import Cart from "./Cart";
 import PaymentForm from "./PaymentForm";
-import { Steps } from "primereact/steps";
-import styled from "styled-components";
-
-const StepsStyled = styled(Steps)`
-  background: #f8f9fa;
-  margin-bottom: 50px;
-  .p-steps .p-steps-item .p-menuitem-link {
-    background: #f8f9fa;
-  }
-`;
+import { StepsStyled } from "../styles/StepsMenuStyled";
 
 const StepsMenu = () => {
   const [activeIndex, setActiveIndex] = useState(0);

@@ -1,9 +1,5 @@
 import React from "react";
-import styled from "styled-components";
-
-const Div = styled.div`
-  height: ${(props) => props.theme};
-`;
+import { Div } from "../styles/EmptyStyled";
 
 const Empty = ({ title, height = 0 }) => {
   const theme = height;

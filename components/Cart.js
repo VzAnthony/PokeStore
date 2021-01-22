@@ -1,29 +1,8 @@
 import React, { useContext } from "react";
-import styled from "styled-components";
-import { DataTable } from "primereact/datatable";
+import { DataTableStyled } from "../styles/CartStyled";
 import { Column } from "primereact/column";
 import { Button } from "primereact/button";
 import { Context } from "../lib/context";
-
-const DataTableStyled = styled(DataTable)`
-  .p-datatable-header {
-    text-align: center;
-  }
-
-  .p-datatable-thead tr th {
-    text-align: center;
-  }
-
-  .p-datatable-tbody tr td {
-    text-align: center;
-    vertical-align: middle;
-    text-transform: capitalize;
-  }
-
-  .p-datatable-footer {
-    text-align: center;
-  }
-`;
 
 const Cart = () => {
   const context = useContext(Context);
