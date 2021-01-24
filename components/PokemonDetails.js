@@ -24,7 +24,7 @@ const PokemonDetail = ({ pokemonName }) => {
     toast.current.show({
       severity: "success",
       summary: "Added to cart",
-      detail: "SUCCESS",
+      detail: "Success",
       life: 2000,
     });
   };

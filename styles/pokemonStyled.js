@@ -176,6 +176,7 @@ export const DivList = styled.div`
   border-bottom: 1px solid #ddd;
   padding: 15px 5px;
   text-align: center;
+  text-transform: capitalize;
 
   ul {
     margin-top: 15px;

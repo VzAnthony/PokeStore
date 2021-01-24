@@ -12,7 +12,9 @@ const PokemonFavList = () => {
       {favListTrue.length === 0 ? (
         <Empty title="Favorites" height="532px" />
       ) : (
-        favListTrue.map((pokemon) => <PokemonFavItem pokemon={pokemon} />)
+        favListTrue.map((pokemon, index) => (
+          <PokemonFavItem pokemon={pokemon} key={`${pokemon.name}-${index}`} />
+        ))
       )}
     </div>
   );

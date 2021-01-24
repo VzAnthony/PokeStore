@@ -7,6 +7,7 @@ export const Form = styled.form`
 export const Div = styled.div`
   width: 100%;
   text-align: center;
+  margin-bottom: 15px;
 
   h2 {
     font-size: 1.5rem;
